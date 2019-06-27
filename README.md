@@ -4,9 +4,9 @@ Supports default values by writting {{VAR=value}} in the template
 
 ## Author
 
-Sébastien Lavoie <github@lavoie.sl>
+Original author: Sébastien Lavoie <github@lavoie.sl> - https://github.com/lavoiesl/bash-templater
 
-Johan Haleby
+Forked project by Johan Haleby - https://github.com/johanhaleby/bash-templater
 
 See http://code.haleby.se/2015/11/20/simple-templating-engine-in-bash/  and http://blog.lavoie.sl/2012/11/simple-templating-system-using-bash.html for more details
 
@@ -46,3 +46,7 @@ templater template -f variables.txt -s
 
 ## Examples
 See examples/
+
+```bash
+templater  examples/vhost-php.tpl.conf -f examples/variables.txt
+```
