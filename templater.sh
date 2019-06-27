@@ -135,6 +135,12 @@ for default in $defaults; do
         eval $default
     fi
 
+    # Reset $current to empty value if $var has a user defined value
+    # Prevent memorizing a user defined value used to build a buggy sed replacement in the last loop
+    if [[ $current != $var ]]; then
+        current=""
+    fi
+
     # remove define line
     replaces="-e '/^{{$var=/d' $replaces"
     vars="$vars
